@@ -56,7 +56,6 @@ fun ArtSpaceApp() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Gambar
         Image(
             painter = painterResource(id = currentArtwork.imageRes),
             contentDescription = currentArtwork.title,
@@ -67,15 +66,11 @@ fun ArtSpaceApp() {
         )
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        // Judul dan Tahun
         Text(
             text = "${currentArtwork.title} (${currentArtwork.year})",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
-
-        // Nama Seniman
         Text(
             text = "By: ${currentArtwork.artist}",
             fontSize = 16.sp,
@@ -84,7 +79,6 @@ fun ArtSpaceApp() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Kategori
         Text(
             text = "Kategori: ${currentArtwork.category}",
             fontSize = 16.sp,
@@ -92,15 +86,12 @@ fun ArtSpaceApp() {
             color = Color.Blue
         )
 
-        // Deskripsi
         Text(
             text = currentArtwork.description,
             fontSize = 14.sp
         )
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        // Rating
         Row {
             repeat(5) { index ->
                 Icon(
@@ -118,7 +109,6 @@ fun ArtSpaceApp() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Tombol Favorit
         Button(
             onClick = { /* Tambahkan aksi favorit */ },
             colors = ButtonDefaults.buttonColors(
@@ -130,7 +120,6 @@ fun ArtSpaceApp() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Navigasi
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween) {
